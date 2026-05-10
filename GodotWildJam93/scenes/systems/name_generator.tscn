@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0n8h7hxnnse2"]
 
-[ext_resource type="Script" uid="uid://bf5y3byulc8jt" path="res://scenes/utilitys/name_generator.gd" id="1_yraj3"]
+[ext_resource type="Script" uid="uid://bf5y3byulc8jt" path="res://scripts/systems/name_generator.gd" id="1_yraj3"]
 
 [node name="NameGenerator" type="Control" unique_id=503255927]
 layout_mode = 3
