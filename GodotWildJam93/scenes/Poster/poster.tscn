@@ -14,7 +14,7 @@ font_size = 50
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1729160514]
 modulate = Color(0.99884933, 0.79973674, 0.37079287, 1)
-position = Vector2(572.25, 309.25)
+position = Vector2(577.25, 308.24997)
 scale = Vector2(266.49997, 424.49997)
 mesh = SubResource("BoxMesh_0q7xs")
 
@@ -47,4 +47,4 @@ text = "Wanted"
 label_settings = SubResource("LabelSettings_3kg2u")
 
 [node name="Picture" parent="." unique_id=121541807 instance=ExtResource("4_scugu")]
-position = Vector2(572.24994, 248)
+position = Vector2(577.24994, 246.99998)
