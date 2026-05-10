@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://vj7i2s1pj7pn"]
+
+[ext_resource type="Script" uid="uid://7dxbya10exlv" path="res://scenes/Main/poster_storage.gd" id="1_gol0p"]
+[ext_resource type="PackedScene" uid="uid://gmng7yhau2yc" path="res://scenes/Poster/poster.tscn" id="2_br8qb"]
+
+[node name="Main" type="Node2D" unique_id=1794926651]
+
+[node name="PosterStorage" type="Node2D" parent="." unique_id=1464727723]
+script = ExtResource("1_gol0p")
+
+[node name="Poster" parent="." unique_id=1944540953 instance=ExtResource("2_br8qb")]

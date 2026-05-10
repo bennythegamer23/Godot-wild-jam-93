@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bf5y3byulc8jt" path="res://scenes/utilitys/name_generator.gd" id="1_yraj3"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_yraj3"]
+font_size = 32
+
 [node name="NameGenerator" type="Control" unique_id=503255927]
 layout_mode = 3
 anchors_preset = 15
@@ -26,3 +29,4 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+label_settings = SubResource("LabelSettings_yraj3")

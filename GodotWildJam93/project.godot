@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Godot wild jam 93"
+run/main_scene="uid://vj7i2s1pj7pn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SignalHub="*uid://dykqpa0e8uduq"
+GlobalVars="*uid://d4f1hogl8b5jw"
 
 [physics]
 

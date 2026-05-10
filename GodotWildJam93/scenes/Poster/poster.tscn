@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://gmng7yhau2yc"]
+
+[ext_resource type="PackedScene" uid="uid://0n8h7hxnnse2" path="res://scenes/utilitys/name_generator.tscn" id="1_chqxs"]
+[ext_resource type="PackedScene" uid="uid://dp5eioub07xxm" path="res://scenes/utilitys/money_counter.tscn" id="2_0q7xs"]
+[ext_resource type="PackedScene" uid="uid://j21kiyav5m18" path="res://scenes/utilitys/reason_generator.tscn" id="3_3kg2u"]
+[ext_resource type="PackedScene" uid="uid://ds2yc7ttfsqa6" path="res://scenes/utilitys/picture.tscn" id="4_scugu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0q7xs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3kg2u"]
+font_size = 50
+
+[node name="Poster" type="Node2D" unique_id=1944540953]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1729160514]
+modulate = Color(0.99884933, 0.79973674, 0.37079287, 1)
+position = Vector2(570.25, 309.25)
+scale = Vector2(266.49997, 424.49997)
+mesh = SubResource("BoxMesh_0q7xs")
+
+[node name="NameGenerator" parent="." unique_id=503255927 instance=ExtResource("1_chqxs")]
+offset_left = 437.0
+offset_top = 342.0
+offset_right = 703.0
+offset_bottom = 379.25
+
+[node name="MoneyCounter" parent="." unique_id=2047914863 node_paths=PackedStringArray("nameGenarator", "Picture") instance=ExtResource("2_0q7xs")]
+offset_left = -1.0
+offset_right = 1150.0
+offset_bottom = 648.0
+nameGenarator = NodePath("../NameGenerator")
+Picture = NodePath("../Picture")
+
+[node name="Reason_Generator" parent="." unique_id=1365243327 instance=ExtResource("3_3kg2u")]
+offset_left = 437.0
+offset_top = 359.0
+offset_right = 703.0
+offset_bottom = 523.0
+
+[node name="Label" type="Label" parent="." unique_id=835856206]
+offset_left = 478.0
+offset_top = 100.0
+offset_right = 666.0
+offset_bottom = 169.0
+text = "Wanted"
+label_settings = SubResource("LabelSettings_3kg2u")
+
+[node name="Picture" parent="." unique_id=121541807 instance=ExtResource("4_scugu")]
+position = Vector2(570, 248)
