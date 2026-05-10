@@ -9,11 +9,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_vcoku")
-Discription = Array[String](["for the murder of", "for stealing from", "for Kidnaping", "for beating", "for setting fire to"])
-Blank1 = ["Timmy jr", "The town dog", "old willy", "Johny", "Young Silly", "town cat", "miss sarah", "pleto"]
+Discription = Dictionary[int, String]({
+1: "for murdering ",
+2: "for stealing from",
+3: "for kidnapping",
+4: "for beating up",
+5: "for setting fire to"
+})
+Blank1 = Dictionary[int, String]({
+1: "sir williams",
+2: "poor man jack",
+3: "a Globlin"
+})
 
-[node name="Label" type="Label" parent="." unique_id=451539109]
+[node name="Label" type="Button" parent="." unique_id=246251018]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -21,8 +32,90 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = -11.5
+offset_top = 70.0
 offset_right = 20.0
-offset_bottom = 11.5
+offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MenuSelect" type="Control" parent="." unique_id=1262270821]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MenuSelect" unique_id=192006148]
+layout_mode = 0
+offset_top = 501.0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0.27387273, 0.27387273, 0.27387273, 0.5294118)
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuSelect" unique_id=1182959781]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -133.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuSelect/MarginContainer" unique_id=141813862]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuSelect/MarginContainer/HBoxContainer" unique_id=907987277]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="stealing" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=192345118]
+layout_mode = 2
+text = "for stealing resources"
+
+[node name="notWorking" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=535423436]
+layout_mode = 2
+text = "for not working"
+
+[node name="Working" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1006304321]
+layout_mode = 2
+text = "for working"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MenuSelect/MarginContainer/HBoxContainer" unique_id=808591293]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="reasonMagic" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1197186344]
+layout_mode = 2
+text = "for the use of Reason magic"
+
+[node name="PleasureMagic" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1697180914]
+layout_mode = 2
+text = "for the use of pleasure magic"
+
+[node name="MoralMagic" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=240668337]
+layout_mode = 2
+text = "for the use of moral magic"
+
+[connection signal="pressed" from="Label" to="." method="_on_label_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer/stealing" to="." method="_on_stealing_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer/notWorking" to="." method="_on_not_working_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer/Working" to="." method="_on_working_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2/reasonMagic" to="." method="_on_reason_magic_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2/PleasureMagic" to="." method="_on_pleasure_magic_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2/MoralMagic" to="." method="_on_moral_magic_pressed"]
