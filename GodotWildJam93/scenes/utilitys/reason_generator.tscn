@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://j21kiyav5m18"]
 
-[ext_resource type="Script" uid="uid://dv7ca8aacmyop" path="res://reason_generator.gd" id="1_vcoku"]
+[ext_resource type="Script" uid="uid://dv7ca8aacmyop" path="res://scenes/utilitys/reason_generator.gd" id="1_vcoku"]
 
 [node name="Reason_Generator" type="Control" unique_id=1365243327]
 layout_mode = 3

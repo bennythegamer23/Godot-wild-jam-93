@@ -40,11 +40,12 @@ Blank1 = Dictionary[int, String]({})
 
 [node name="Label" type="Label" parent="." unique_id=835856206]
 offset_left = 478.0
-offset_top = 100.0
+offset_top = 82.0
 offset_right = 666.0
-offset_bottom = 169.0
+offset_bottom = 151.0
 text = "Wanted"
 label_settings = SubResource("LabelSettings_3kg2u")
 
 [node name="Picture" parent="." unique_id=121541807 instance=ExtResource("4_scugu")]
-position = Vector2(577.24994, 246.99998)
+offset_right = 1154.0
+offset_bottom = 643.0

@@ -3,7 +3,7 @@ extends Control
 @onready var money_for_bounty: Label = $MarginContainer/HBoxContainer/MoneyForBounty
 @onready var money_in_vault: Label = $MarginContainer/MoneyInVault
 @export var nameGenarator: Control
-@export var Picture: MeshInstance2D
+@export var Picture: Control
 
 var money: int = 100
 

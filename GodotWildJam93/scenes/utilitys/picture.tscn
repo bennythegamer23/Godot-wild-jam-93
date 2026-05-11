@@ -1,17 +1,130 @@
 [gd_scene format=3 uid="uid://ds2yc7ttfsqa6"]
 
-[ext_resource type="Script" uid="uid://c7grv4oldikr" path="res://picture.gd" id="1_8i58b"]
+[ext_resource type="Script" uid="uid://c7grv4oldikr" path="res://scenes/utilitys/picture.gd" id="1_8i58b"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_8i58b"]
-
-[node name="Picture" type="MeshInstance2D" unique_id=121541807]
-scale = Vector2(238.00006, 159.99998)
-mesh = SubResource("BoxMesh_8i58b")
+[node name="Picture" type="Control" unique_id=735431074]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_8i58b")
 pictures = Dictionary[int, Color]({
 1: Color(1, 0, 0, 1),
 2: Color(0, 1, 0, 1),
 3: Color(0, 0, 1, 1),
-4: Color(1, 1, 0, 1),
-5: Color(1, 0, 1, 1)
+4: Color(1, 0, 1, 1),
+5: Color(1, 1, 0, 1)
 })
+
+[node name="Button" type="Button" parent="." unique_id=1158539758]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 473.0
+offset_top = 141.0
+offset_right = -469.0
+offset_bottom = -319.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1224334184]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 474.0
+offset_top = 142.0
+offset_right = -469.0
+offset_bottom = -319.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuSelect" type="Control" parent="." unique_id=726921153]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MenuSelect" unique_id=1225953705]
+layout_mode = 0
+offset_top = 501.0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0.27387273, 0.27387273, 0.27387273, 0.5294118)
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuSelect" unique_id=876604508]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -133.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuSelect/MarginContainer" unique_id=1937371011]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuSelect/MarginContainer/HBoxContainer" unique_id=1549333986]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="stealing" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=819381312]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "                  "
+
+[node name="notWorking" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=117644310]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+text = " "
+
+[node name="Working" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1580620615]
+modulate = Color(0, 0, 1, 1)
+layout_mode = 2
+text = "       "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MenuSelect/MarginContainer/HBoxContainer" unique_id=1032143593]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="reasonMagic" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1411515414]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+text = " "
+
+[node name="PleasureMagic" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1813361681]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+text = " "
+
+[node name="MoralMagic" type="Button" parent="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2071086554]
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer/stealing" to="." method="_on_stealing_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer/notWorking" to="." method="_on_not_working_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer/Working" to="." method="_on_working_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2/reasonMagic" to="." method="_on_reason_magic_pressed"]
+[connection signal="pressed" from="MenuSelect/MarginContainer/HBoxContainer/VBoxContainer2/PleasureMagic" to="." method="_on_pleasure_magic_pressed"]
