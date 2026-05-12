@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dp5eioub07xxm" path="res://scenes/utilitys/money_counter.tscn" id="2_0q7xs"]
 [ext_resource type="PackedScene" uid="uid://j21kiyav5m18" path="res://scenes/utilitys/reason_generator.tscn" id="3_3kg2u"]
 [ext_resource type="PackedScene" uid="uid://ds2yc7ttfsqa6" path="res://scenes/utilitys/picture.tscn" id="4_scugu"]
+[ext_resource type="PackedScene" uid="uid://b75hcaj0g21pl" path="res://scenes/utilitys/watch_out_for.tscn" id="5_lj6ui"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0q7xs"]
 
@@ -49,3 +50,7 @@ label_settings = SubResource("LabelSettings_3kg2u")
 [node name="Picture" parent="." unique_id=121541807 instance=ExtResource("4_scugu")]
 offset_right = 1154.0
 offset_bottom = 643.0
+
+[node name="WatchOutFor" parent="." unique_id=28883909 instance=ExtResource("5_lj6ui")]
+offset_right = 1152.0
+offset_bottom = 648.0

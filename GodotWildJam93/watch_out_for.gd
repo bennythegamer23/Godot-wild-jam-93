@@ -30,22 +30,22 @@ func get_real_Bounty(dis: int, name: int):
 		Current_bounty = 400
 
 func _on_stealing_pressed() -> void:
-	label.text = "for stealing resources"
+	label.text = "Watch out they can use magic"
 
 func _on_not_working_pressed() -> void:
-	label.text = "for not working"
+	label.text = "Watch out they have a gun"
 
 func _on_working_pressed() -> void:
-	label.text = "for working"
+	label.text = "Watch out they have a hostage"
 
 func _on_reason_magic_pressed() -> void:
-	label.text = "for the use of Reason magic"
+	label.text = ""
 
 func _on_pleasure_magic_pressed() -> void:
-	label.text = "for the use of pleasure magic"
+	label.text = ""
 
 func _on_moral_magic_pressed() -> void:
-	label.text = "for the use of moral magic"
+	label.text = ""
 
 
 func _on_label_pressed() -> void:
